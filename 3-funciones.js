@@ -9,81 +9,75 @@ despedir();
 
 // 1.2 Crea una función llamada `multiplicarPorDos` que tome un número como parámetro y devuelva el doble de ese número.
 function multiplicarPorDos(numero){
-    let result = numero * 2;
-    console.log(result);
+    return numero * 2;
 }
-multiplicarPorDos(25);
+console.log(multiplicarPorDos(25));
 
 // 1.3 Crea una función llamada `esMayorDeEdad` que tome un número como parámetro y devuelva `true` si es mayor de 18, o `false` en caso contrario.
 function esMayorDeEdad(numero){
     if (numero > 18){
-        console.log('True');
+        return true;
     }
-    else{
-        console.log('False');
+    else{   
+        return false;
     }
 }
-esMayorDeEdad(20);
+console.log(esMayorDeEdad(20));
 
 // 2. Parámetros
 // 2.1 Crea una función llamada `multiplicar` que reciba dos parámetros, los multiplique y devuelva el resultado.
 function multiplicar(a, b){
-    let result = a * b;
-    console.log(result);
+    return a * b;
 }
-multiplicar(3, 6);
+console.log(multiplicar(2, 3));
 
 // 2.2 Escribe una función llamada `saludarPersonalizado` que reciba dos parámetros: `nombre` y `apellido`. La función debe devolver "Hola, [nombre] [apellido]".
 function saludarPersonalizado(nombre, apellido){
-    console.log('Hola, ' + nombre + apellido);
+    return 'Hola, ' + nombre + apellido;
 }
-saludarPersonalizado('Juan ', 'Gómez');
+console.log(saludarPersonalizado('Juan ', 'Gómez'));
 
 // 2.3 Crea una función llamada `calcularPotencia` que reciba dos parámetros: base y exponente. La función debe devolver el resultado de elevar la base al exponente.
 function calcularPotencia(base, exponente){
-    let result = base ** exponente;
-    console.log(result);
+    return base ** exponente;
 }
-calcularPotencia(5, 2);
+console.log(calcularPotencia(5, 2));
 
 // 2.4 Escribe una función llamada `restar` que reciba dos parámetros y devuelva la diferencia entre ellos.
 function restar(a, b){
-    let result = a - b;
-    console.log(result);
+    return a - b;
 }
-restar(15, 10);
+console.log(restar(15, 10));
 
 // 2.5 Crea una función llamada `dividir` que reciba dos parámetros y devuelva el resultado de la división del primer parámetro por el segundo.
 function dividir(a, b){
-    let result = a / b;
-    console.log(result);
+    return a / b;
 }
-dividir(15, 5);
+console.log(dividir(15, 5));
 
 // 3. Function Expression
 // 3.1 Crea una **function expression** que multiplique dos números y asígnala a la variable `multiplicar`.
-let multiplicar = function(a, b){
-    let result = a * b;
-    console.log(result);
+let expressionMultiplicar = function(a, b){
+    return a * b;
 }
-multiplicar(2, 3); 
+console.log(multiplicar(2, 3)); 
     
 // 3.2 Escribe una **function expression** llamada `saludar` que acepte un parámetro `nombre` y devuelva "Hola, [nombre]".
 let saludar = function(nombre){
-    console.log('Hola, ' + nombre);
+    return 'Hola, ' + nombre;
 }
-saludar('María');
+console.log(saludar('María'));
 
 // 3.3 Crea una **function expression** llamada `esPar` que acepte un número como parámetro y devuelva `true` si el número es par, o `false` en caso contrario.
 let esPar = function(numero){
     if (numero % 2 === 0 ){
-        console.log('True');
+        return true;
     }
     else{
-        console.log('False');
+        return false;
     }
 }
-esPar(10);
+console.log(esPar(10));
 
 // 4. Funciones Flecha
 // 4.1 Convierte la siguiente función en una función flecha llamada multiplicarFlecha:
@@ -91,23 +85,22 @@ esPar(10);
 //     return a * b;
 // }
 const multiplicarFlecha = (a, b) => {
-    let result = a * b;
-    console.log(result);
+    return a * b;
 }
-multiplicarFlecha(4, 3);
+console.log(multiplicarFlecha(3, 4));
 
 // 4.2 Crea una función flecha llamada `saludarFlecha` que reciba un parámetro `nombre` y devuelva "Hola [nombre]".
 const saludarFlecha = (nombre) => {
-    console.log('Hola ' + nombre);
+    return 'Hola ' + nombre;
 }
-saludarFlecha('Karen');
+console.log(saludarFlecha('Karen'));
 
 // 4.3 Escribe una función flecha llamada `calcularArea` que reciba el radio de un círculo y devuelva el área del círculo. Usa la fórmula A = π * r².
 const calcularArea = radio => {
     let result = Math.PI * radio * radio;
-    console.log(result);
+    return result;
 }
-calcularArea(10);
+console.log(calcularArea(10));
 
 // 5. Recursividad
 // 5.1 Escribe una función que calcule la suma de los primeros n números enteros de forma recursiva. Por ejemplo: `suma(3) -> 1 + 2 + 3 = 6`
